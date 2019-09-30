@@ -1,5 +1,6 @@
 package ru.itpark;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -7,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TaxiServiceTest {
 
     @Test
+    @DisplayName("Should calculate total cost of trip")
     void count() {
         {
             TaxiService service = new TaxiService();
