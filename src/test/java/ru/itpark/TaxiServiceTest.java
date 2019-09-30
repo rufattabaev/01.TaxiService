@@ -8,8 +8,22 @@ class TaxiServiceTest {
 
     @Test
     void count() {
-        TaxiService service = new TaxiService();
-        int totalCost = service.count(60,20, 10 );
-        assertEquals(260,totalCost );
+        {
+            TaxiService service = new TaxiService();
+            int totalCost = service.count(60, 20, 10);
+            assertEquals(260, totalCost);
+        }
+        {
+            TaxiService service = new TaxiService();
+            int totalCost = service.count(60, 20, 50);
+            assertEquals(1007, totalCost);
+        }
+        {
+            TaxiService service = new TaxiService();
+            int totalCost = service.count(60, 20, 100);
+            assertEquals(1960, totalCost);
+        }
     }
+
+
 }
